@@ -1,14 +1,15 @@
+<h2>Brand Details</h2>
 <p style="color: green"><%= notice %></p>
 
 <%= render @brand %>
-<h6> Brand Name </h6>
-<%= @brand.brand_name %>
-<h6> Brand Description </h6>
-<%= @brand.brand_description %>
+<label> Brand Name </label>
+<p><%= @brand.brand_name %></p>
+<label> Brand Description </label>
+<p><%= @brand.brand_description %></p>
  
 <div>
   <%= link_to "Edit this brand", edit_brand_path(@brand) %> |
   <%= link_to "Back to brands", brands_path %>
 
-  <%= button_to "Destroy this brand", @brand, method: :delete %>
+  <%= button_to "Destroy this brand", @brand, method: :delete, class: "btn btn-danger" %>
 </div>
