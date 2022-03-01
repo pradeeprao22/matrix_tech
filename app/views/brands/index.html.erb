@@ -1,0 +1,31 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Brands</h1>
+<%= link_to "Back to products", root_path %>
+
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<table>
+
+<tr>
+<th>Brand ID</th>
+<th>Brand Name</th>
+<th>Brand Description</th>
+<th>Show</th>
+</tr>
+
+<% @brands.map do |b| %>
+<tr>
+    <td><%= b.brand_id %></td>
+    <td><%= b.brand_name %></td>
+    <td><%= b.brand_description %></td>
+    <td><%= link_to "Show this brand", b %></td>
+
+</tr>
+<% end %>
+</table>
+
+<%= link_to "New brand", new_brand_path %>

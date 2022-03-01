@@ -1,0 +1,16 @@
+       <!--<td><%= link_to 'Edit Product', product_path(p.product_id) %></td>-->
+        <!--<td><%= button_to 'Delete', product_delete_path(p.product_id) %></td>-->
+
+
+
+
+<div id="products">
+  <% @products.each do |product| %>
+    <%= render product %>
+    <p>
+      <%= link_to "Show this product", product %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New product", new_product_path %>

@@ -1,0 +1,42 @@
+<p style="color: green"><%= notice %></p>
+
+
+
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<br>
+<center>
+<h1>Products</h1>
+<table>
+<tr>
+    <th>Product ID</th>
+    <th>Product Name</th>
+    <th>Product Brand</th>
+    <th>SKU CODE</th>
+    <th>Brand Name</th>
+    <th>Edit</th>
+    <th>Delete</th>
+</tr>
+<% @products.map do |p|  %>
+    <tr>
+        <td><%= p.product_id %></td>
+        <td><%= p.product_name %></td>
+        <td><%= p.product_description %></td>
+        <td> <%= p.sku_code  %></td>
+        <td><%= p.brand.brand_name %></td>
+        <td><%= link_to "Edit this product", edit_product_path(p) %></td>
+
+        <td><%= button_to "Destroy this product", p, method: :delete %></td>
+
+ 
+    </tr>
+<% end  %>
+<table>
+<%= link_to 'Add Products', new_product_path %><br>
+<%= link_to 'All Brands', brands_path %>
+
+</center>
+
