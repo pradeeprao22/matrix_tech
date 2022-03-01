@@ -1,24 +1,28 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
+This application lists all the product with brand name, products have sku code, which are the combination of product id and brand id.
 
-Things you may want to cover:
+### Installation steps 
 
-* Ruby version
+bundle install 
 
-* System dependencies
+rails db:create
 
-* Configuration
+rails db:migrate
 
-* Database creation
+rails db:seed
 
-* Database initialization
+### For running the tests
 
-* How to run the test suite
+rspec
 
-* Services (job queues, cache servers, search engines, etc.)
+### Dependencies
 
-* Deployment instructions
+rails 7.0.2.2
 
-* ...
+ruby 3.0 
+
+rspec
+
+bootstrap 5
