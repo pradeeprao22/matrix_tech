@@ -26,3 +26,5 @@ ruby 3.0
 rspec
 
 bootstrap 5
+
+capybara
